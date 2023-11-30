@@ -1,4 +1,12 @@
 //standard template library
+//-STL contains 4 components:
+// 1.containers- it is of 4 categories; eg. vector, list, deque, set
+// 2.iterators
+// 3.algorithms
+// 4.functions
+
+
+
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
@@ -46,8 +54,7 @@ vec.emplace_back(70);
 //#3. rbegin(): Returns a reverse iterator pointing to the last element of the vector (the end in reverse).
 //#4. rend(): Returns a reverse iterator pointing to one position before the first element in the vector (the beginning in reverse).
 
-vector<int >::iterator it=vec.begin(); // points to the first element of the vector, use dereference operator to access the element
-
+// vector<int >::iterator it=vec.begin(); // points to the first element of the vector, use dereference operator to access the element
 // cout<<*it<<endl;
 // ++it;
 // cout<<*it;
@@ -59,16 +66,75 @@ vector<int >::iterator it=vec.begin(); // points to the first element of the vec
 
         //+++++++++ or +++++++++++
 
-for(auto it=vec.begin();it!=vec.end();++it){
-    cout<<*it<<endl;
+// for(auto it=vec.begin();it!=vec.end();++it){
+//     cout<<*it<<endl;
+// }
+
+        //+++++++++++ or ++++++++++++
+
+// we can use to 'for each' loop to iterate over the vector
+
+// for(auto it:vec){
+//     cout<<it<<endl;    //'it' is a represents the current element in each iteration
+//                        // vec is the range or container you want to iterate over(here vector)
+// }
+
+//   ==> Deletion of elements:
+//  - to delete a single element:
+//  .erase(pos): Deletes the element at the specified position.
+
+// vec.erase(vec.begin()+1);
+// for(auto it:vec){
+//     cout<< it <<" ";// 2nd element is deleted i.e. 2; o/p: 1 3 4 50 60 70
+// }
+// cout<< endl;
+
+//     => .erase(first,last): Deletes the elements in the range [first, last).
+
+// vec.erase(vec.begin()+1, vec.begin()+5);
+// for(auto it:vec){
+//     cout<< it<< " ";
+// }
+// cout<< endl;
+
+// vec.clear();          //clear the entire vector
+// for(auto it: vec){
+//     cout<< it << " ";
+// }
+
+
+//   ==> Insertion of elements: .insert(pos, val): Inserts a copy of val at the specified position.
+
+vector<int> myVector(2,100);
+// myVector.insert(myVector.begin(),20);
+
+    // -insert in between the two elements
+
+// myVector.insert(myVector.begin()+1,30);
+
+    // -insert more than one element of the same value
+
+// myVector.insert(myVector.begin()+1,2,40); 
+
+
+//   ==> insertion of a vector into another vector
+
+vector<int> copy(2,50);
+myVector.insert(myVector.begin()+1,copy.begin(),copy.end());
+
+//  ==> .size(); // returns the number of elements in the vector
+
+// cout<<myVector.size()<<endl;
+
+// ==> to swap two vectors: .swap();
+
+vector<int>v1={10,20};
+vector<int>v2={30,40};
+v1.swap(v2);
+
+for(auto it:v1){
+    cout<< it<<" ";
 }
-
-
-
-
-
-
-
 
 
 
