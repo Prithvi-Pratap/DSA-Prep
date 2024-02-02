@@ -10,7 +10,7 @@ void insertionSort(int arr[], int n){
             break;
             else if(arr[start]<arr[start-1]){
             swap(arr[start],arr[start-1]);
-            start=start-1;
+            start--;
             }
             else break;
         }
@@ -29,6 +29,5 @@ int main(){
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
     }
-
     return 0;
 }
