@@ -1,3 +1,5 @@
+//code to find the largest element of the array
+
 #include<bits/stdc++.h>
 using namespace std;
 

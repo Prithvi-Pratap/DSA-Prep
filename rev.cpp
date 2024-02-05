@@ -16,7 +16,7 @@ int partition(vector<int>& arr,int low ,int high){
 
 void quickSort(vector<int>& arr, int low ,int high){
     if(low<high){
-    int pi=partition(arr,low,high);
+    int pi=partition(arr,low,high); //always call this partition function inside the if statement
         quickSort(arr,low,pi-1);
         quickSort(arr,pi+1,high);
     }
