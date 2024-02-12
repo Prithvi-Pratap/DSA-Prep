@@ -21,12 +21,12 @@ int checkSorted(vector<int> arr, int n)
             return 0;
         }
     }
-    return true;
+    return 1;
 }
 bool check(vector<int> &arr)
 {
     int n = arr.size();
-    int length =n;
+    int length = n;
     int sorted = 0;
     while (length)
     {
@@ -34,9 +34,11 @@ bool check(vector<int> &arr)
         {
             return true;
         }
+        else{
+        rotate(arr, n);
+        }
         length--;
     }
-    rotate(arr, n);
     return false;
 }
 
