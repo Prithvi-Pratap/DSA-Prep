@@ -1,11 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//brute force: linear search approach, time complexity O(n+m) ,space complexity O(1)
 vector<int> twoSum(vector<int> arr,int target){
     for(int i=0;i<arr.size();i++){
         for(int j=0;j<arr.size();j++){
             if(((arr[i]+arr[j])==target) && (i!=j))
-            return {i,j};
+            return {i,j}; 
             
         }
     }
