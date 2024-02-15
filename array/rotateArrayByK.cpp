@@ -11,28 +11,15 @@ using namespace std;
 //     for(int i=k;i<n;i++){
 //         arr[i-k]=arr[i];
 //     }
-//     int j=0;
-//     for(int i=k+1;i<n;i++){
+//     for(int i=n-k,j=0;i<n;i++,j++){
 //         arr[i]=temp[j];
-//         j++;
 //     }
 //      return arr;
 // }
 
-vector<int> rotateArray(vector<int> arr, int n, int k) {
-    int temp[k];
-    for (int i = 0; i < k; i++) {
-        temp[i] = arr[i];
-    }
-    for (int i = k; i < n; i++) {
-        arr[i - k] = arr[i];
-    }
-    for (int i = n - k, j = 0; i < n; i++, j++) {
-        arr[i] = temp[j];
-    }
-    return arr;
+vector<int> rotateArray(vector<int>arr,int n,int k){
+    reverse(arr.begin)
 }
-
 
 
 int main(){

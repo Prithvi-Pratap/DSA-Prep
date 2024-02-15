@@ -1,0 +1,1 @@
+{"name":"Local: test","url":"c:\\Users\\hp\\Desktop\\DSA-Prep\\test.cpp","tests":[{"id":1707586430861,"input":"2\n1 2\n1","output":"2 1"},{"id":1707586454212,"input":"7\n1 2 3 4 5 6 7\n3","output":"4 5 6 7 1 2 3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\hp\\Desktop\\DSA-Prep\\test.cpp","group":"local","local":true}
