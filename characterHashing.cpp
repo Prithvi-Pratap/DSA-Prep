@@ -7,7 +7,8 @@ int main(){
     //pre-calculation
     int Hash[26]={0};
     for(int i=0;i<str.size();i++){
-        Hash[(int)str[i]-97]+=1;
+        // Hash[(int)str[i]-97]+=1; or
+        Hash[str[i]-'a']++;
     }
 
     int q;
@@ -16,7 +17,7 @@ int main(){
     while(q--){
         char ch;
         cin>>ch;
-        cout<<Hash[(int)ch-97]<<endl;
+        cout<<Hash[ch-'a']<<endl;
     }
 
 

@@ -1,25 +1,25 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// vector<int> rotateArray(vector<int>arr, int n,int k) {
-//     // Write your code here.
-//     int temp[k];
-//     // int n=arr.size();
-//     for(int i=0;i<k;i++){
-//         temp[i]=arr[i];
-//     }
-//     for(int i=k;i<n;i++){
-//         arr[i-k]=arr[i];
-//     }
-//     for(int i=n-k,j=0;i<n;i++,j++){
-//         arr[i]=temp[j];
-//     }
-//      return arr;
-// }
-
-vector<int> rotateArray(vector<int>arr,int n,int k){
-    reverse(arr.begin)
+vector<int> rotateArray(vector<int>arr, int n,int k) {
+    // Write your code here.
+    int temp[k];
+    // int n=arr.size();
+    for(int i=0;i<k;i++){
+        temp[i]=arr[i];
+    }
+    for(int i=k;i<n;i++){
+        arr[i-k]=arr[i];
+    }
+    for(int i=n-k,j=0;i<n;i++,j++){
+        arr[i]=temp[j];
+    }
+     return arr;
 }
+
+// vector<int> rotateArray(vector<int>arr,int n,int k){
+//     reverse(arr.begin)
+// }
 
 
 int main(){
