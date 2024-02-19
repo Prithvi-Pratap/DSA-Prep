@@ -23,10 +23,5 @@ int main(){
         cin>>number;
         cout<<hashArr[number]<<endl;
     }
-
         return 0;
-
-
-
-
 }
