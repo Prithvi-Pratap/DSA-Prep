@@ -45,7 +45,7 @@ int main(){
     }
 
     //pre-compute
-    map<int,int> myMap;
+    map<int ,int> myMap;
     for(int i=0;i<n;i++){
         myMap[arr[i]]++;
     }  
