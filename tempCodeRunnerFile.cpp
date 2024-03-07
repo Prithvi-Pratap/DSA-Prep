@@ -1,28 +1,35 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-void rotate(vector<int> &arr, int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        swap(arr[n - i], arr[i]);
+vector<int> twoSum(vector<int>arr,int target){
+    map<int,int> mpp;
+    for(int i=0;i<arr.size();i++){
+        int currentElem=arr[i];
+        int required=target-currentElem;
+        if(mpp.find(required)!=mpp.end()) // this statement checks if the required elem is present in the map or not , if the 'required' will be present then it will not point to the one past to the last pair of elem
+        return {mpp[required],i};
+        mpp[currentElem]=i;
     }
+    return {-1,-1};
 }
 
-int main()
-{
+int main(){
     int n;
-    cin >> n;
+    cin>>n;
     vector<int> arr;
-    for (int i = 0; i < n; i++)
-    {
-        int element;
-        cin >> element;
-        arr.push_back(element);
+    vector<int> result;
+    for(int i=0;i<n;i++){
+        int elem;
+        cin>> elem;
+        arr.push_back(elem);
     }
-    rotate(arr,5);
-    for(int elem: arr){
-        cout<<elem<<" ";
+    int target;
+    cin>>target;
+    result=twoSum(arr,target);
+
+    for(auto& it:result){
+        cout<<it<<" ";
     }
+
     return 0;
 }
