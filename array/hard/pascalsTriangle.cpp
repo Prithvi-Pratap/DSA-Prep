@@ -4,7 +4,6 @@ there are three types of possible question:
 1. find  the  element  at given row and column position
 2. print the nth row elements
 3. print the pascal's triangle till nth row
-*/
 
 
 // type  1: find the element at given row and column position
@@ -36,3 +35,46 @@ int main(){
 
     return  0;
 }
+*/
+
+
+
+//type 2:Print the elements of nth row 
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int findNCR(int n){
+    long long result=1;
+    for(int i=1;i<=n;i++){
+        cout<<result<<" ";
+        result*=n-i;
+        result/=i;
+    }
+}
+
+int main(){
+    int n;
+    cin>>n;
+
+    findNCR(n);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
