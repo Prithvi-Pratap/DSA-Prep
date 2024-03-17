@@ -14,13 +14,9 @@ using namespace std;
 
 int findNcR(int  n,int r){
     long  long result=1;
-    long  long x=1;
-    long long y=1;
-    for(int i=0;i<r;i++){
-        // x*=n-i;
-        // y*=r-i;
+    for(int i=1;i<r;i++){
         result*=n-i;
-        result/=r-i;
+        result/=i;
     }
     // result=x/y;
 
@@ -35,7 +31,6 @@ int main(){
 
     return  0;
 }
-*/
 
 
 
@@ -59,6 +54,45 @@ int main(){
 
     findNCR(n);
     return 0;
+}
+*/
+
+
+//type 3:print the pascal's triangle till nth row
+
+#include<bits/stdc++.h>
+using namespace std;
+
+vector<int> generateRow(int n){
+    vector<int>row;
+    int result=1;
+    for(int i=1;i<=n;i++){
+        row.push_back(result);
+        result*=n-i;
+        result/=i;
+    }
+    return row;
+}
+
+vector<vector<int>>generateTriangle(int n){
+    vector<vector<int>>triangle;
+    for(int i=1;i<=n;i++){
+        triangle.push_back(generateRow(i));
+    }
+    return  triangle;
+}
+
+int main(){
+    int n;
+    cin>>n;
+    vector<vector<int>> triangle;
+    triangle=generateTriangle(n);
+    for(int i=0;i<triangle.size();i++){
+        for(auto& it:triangle[i]){
+            cout<<it<<" ";
+        }
+        cout<<endl;
+    }
 }
 
 
